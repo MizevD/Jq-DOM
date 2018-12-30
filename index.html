@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.3.1.js"></script>
+	<title></title>
+</head>
+<body>
+      <h1>Список дел</h1>
+      <input type="text" placeholder="добавить элемент">
+      <button id="add">Добавить</button>
+      <ol id="mylist"></ol>
+
+    
+    <script type="text/javascript">
+    $('#add').click
+    (
+     function() 
+     {
+      var value = $('input').val();
+      var ecl = $('<li></li>').text(value);
+      $(ecl).append('<button class="delet">удалить</button>');
+      $('#mylist').append(ecl);
+      
+      $('.delet').click(
+      	               function() 
+      	               {
+                        $(this).parent().remove();
+      	                }
+      	              )
+     }
+ 
+
+
+
+    );
+     	
+    </script>
+</body>
+</html>
